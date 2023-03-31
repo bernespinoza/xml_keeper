@@ -4,7 +4,10 @@ xml.result do
   xml.content do
     xml.status 'success'
   end
+
   xml.customer do
+    xml.create 'true'
+    xml.description 'Mock response'
     xml.customerid @xml_document.id
     xml.name 'test'
     xml.termname 't'
@@ -20,6 +23,10 @@ xml.result do
     xml.subro_commission_start_date 'na'
     xml.subro_commission_end_date 'na'
     xml.subro_commission_rate 'na'
+  end
+
+  xml.request do
+    xml.requestid @xml_document.id
     xml.xml_document do
       xml.name @xml_document.name
       file = Nokogiri::XML(@xml_document.file.download)

@@ -1,24 +1,10 @@
-# README
+### XML KEEPER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Point your http request with XML body to this server and validate how it looks
+in web server
 
-Things you may want to cover:
 
-* Ruby version
+### WIKI
 
-* System dependencies
+...
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

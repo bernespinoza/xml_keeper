@@ -30,7 +30,7 @@ class XmlDocumentsController < ApplicationController
     xml_file.write(Nokogiri::XML(xml_document_params).to_xml)
     xml_file.rewind
     xml_file.close
-    @xml_document = XmlDocument.new(name: filename)
+    @xml_document = XmlDocument.new(name: file_name)
     @xml_document.file.attach(io: xml_file.open, filename: @xml_document.name, content_type: 'application/xml')
 
     respond_to do |format|
@@ -78,6 +78,6 @@ class XmlDocumentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def xml_document_params
-      params.require(:xml_document)#.permit(:name, :s3, :file)
+      params.require(:xmlrequest)#.permit(:name, :s3, :file)
     end
 end
